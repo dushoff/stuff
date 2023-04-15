@@ -11,6 +11,27 @@ vim_session:
 
 ######################################################################
 
+## Developing time cache
+
+slowtarget/a.out: a.in
+	$(cat)
+
+## b.out.final: a.in
+## b.out: a.in
+b.out: slow/a.out
+	$(cat)
+
+######################################################################
+
+slowtarget/slow.Rout: slow.R
+	$(pipeR)
+
+## slowview.Rout.final: slowview.R slow.R
+## slowview.Rout: slowview.R slow.R
+slowview.Rout: slowview.R slow/slow.rda
+
+######################################################################
+
 Sources += $(wildcard *.R)
 
 autopipeR = defined
@@ -39,6 +60,7 @@ makestuff/%.stamp:
 -include makestuff/os.mk
 
 -include makestuff/pipeR.mk
+-include makestuff/slowtarget.mk
 
 -include makestuff/git.mk
 -include makestuff/visual.mk
