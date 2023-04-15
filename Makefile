@@ -13,6 +13,8 @@ vim_session:
 
 ## Developing time cache
 
+Sources += $(wildcard *.in)
+Ignore += $(wildcard *.out)
 slowtarget/a.out: a.in
 	$(cat)
 
