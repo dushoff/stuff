@@ -25,7 +25,7 @@ b.out: slow/a.out
 
 ######################################################################
 
-Sources += slowtarget/*.rda
+Sources += $(wildcard slowtarget/*.rda slowtarget/*.Rout)
 slowtarget/slow.Rout: slow.R
 	$(pipeR)
 
