@@ -11,6 +11,8 @@ vim_session:
 
 ######################################################################
 
+Sources += $(wildcard *.R)
+
 Ignore += stepper.mk
 
 Sources += stepper.pl
