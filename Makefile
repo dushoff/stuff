@@ -11,7 +11,12 @@ vim_session:
 
 ######################################################################
 
+alldirs += stepper
+
+######################################################################
+
 ## Developing time cache
+## Maybe OK, see makestuff/slowtarget.md
 
 Sources += $(wildcard *.in)
 Ignore += $(wildcard *.out)
