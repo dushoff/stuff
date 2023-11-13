@@ -11,6 +11,9 @@ vim_session:
 
 ######################################################################
 
+Ignore += stepper.mk
+
+Sources += stepper.pl
 ## stepper.mk: stepper.pl
 
 write.Rout: write.R
