@@ -13,6 +13,8 @@ vim_session:
 
 alldirs += stepper
 
+Ignore += $(alldirs)
+
 ######################################################################
 
 ## Developing time cache
