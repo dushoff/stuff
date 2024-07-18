@@ -61,7 +61,8 @@ Sources += $(wildcard *.bib *.tex)
 ## example.pdf: example.tex
 ## beautiful.Rout: beautiful.R
 
-dotdir: makestuff.sync
+## This creates incomprehensible weirdness (fails to set up directory)
+## dotdir: makestuff.sync
 
 ######################################################################
 
