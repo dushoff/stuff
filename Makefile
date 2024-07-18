@@ -58,7 +58,8 @@ z.Rout: z.R x.rds
 
 Sources += $(wildcard *.bib *.tex)
 
-example.pdf: example.tex
+## example.pdf: example.tex
+## beautiful.Rout: beautiful.R
 
 ######################################################################
 
