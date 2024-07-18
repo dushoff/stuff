@@ -67,6 +67,14 @@ Sources += $(wildcard *.bib *.tex)
 
 ######################################################################
 
+## Don't trust make -n here
+
+## touch example.tex && make example.pdf > make.log ##
+## touch *.bib && make example.pdf > make.log ##
+## touch *.R && make example.pdf > make.log ##
+
+######################################################################
+
 ### Makestuff
 
 Sources += Makefile
