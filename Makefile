@@ -63,6 +63,7 @@ Sources += $(wildcard *.bib *.tex)
 
 ## This creates incomprehensible weirdness (fails to set up directory)
 ## dotdir: makestuff.sync
+## Also: why can't I figure out how to tee into a log for this?
 
 ######################################################################
 
