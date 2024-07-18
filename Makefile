@@ -61,6 +61,8 @@ Sources += $(wildcard *.bib *.tex)
 ## example.pdf: example.tex
 ## beautiful.Rout: beautiful.R
 
+dotdir: makestuff.sync
+
 ######################################################################
 
 ### Makestuff
