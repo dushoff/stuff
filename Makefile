@@ -56,6 +56,8 @@ z.Rout: z.R x.rds
 
 ## Developing texj 2024 Jul 18 (Thu)
 
+Sources += $(wildcard *.bib *.tex)
+
 example.pdf: example.tex
 
 ######################################################################
