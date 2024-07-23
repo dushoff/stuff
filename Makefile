@@ -65,6 +65,9 @@ Sources += $(wildcard *.bib *.tex)
 ## dotdir: makestuff.sync
 ## Also: why can't I figure out how to tee into a log for this?
 
+## broken.pdf: broken.tex
+## broken.force.pdf: broken.tex
+
 ######################################################################
 
 ## Don't trust make -n here
