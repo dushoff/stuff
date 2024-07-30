@@ -62,7 +62,7 @@ Sources += $(wildcard *.bib *.tex)
 ## beautiful.Rout: beautiful.R
 
 ## This creates incomprehensible weirdness (fails to set up directory)
-## dotdir: makestuff.sync
+dotdir: makestuff.sync
 ## Also: why can't I figure out how to tee into a log for this?
 
 ## broken.pdf: broken.tex
