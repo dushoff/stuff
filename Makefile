@@ -11,7 +11,14 @@ vim_session:
 
 ######################################################################
 
+alldirs += stepper
+
+Ignore += $(alldirs)
+
+######################################################################
+
 ## Developing time cache
+## Maybe OK, see makestuff/slowtarget.md
 
 Sources += $(wildcard *.in)
 Ignore += $(wildcard *.out)
@@ -47,6 +54,31 @@ z.Rout: z.R x.rds
 
 ######################################################################
 
+## Developing texj 2024 Jul 18 (Thu)
+
+Sources += $(wildcard *.bib *.tex)
+
+## example.pdf: example.tex
+## beautiful.Rout: beautiful.R
+
+## This creates incomprehensible weirdness (fails to set up directory)
+## Seems to work with make dotdir
+dotdir: makestuff.sync
+## Also: why can't I figure out how to tee into a log for this?
+
+## broken.pdf: broken.tex
+## broken.force.pdf: broken.tex
+
+######################################################################
+
+## Don't trust make -n here
+
+## touch example.tex && make example.pdf > make.log ##
+## touch *.bib && make example.pdf > make.log ##
+## touch *.R && make example.pdf > make.log ##
+
+######################################################################
+
 ### Makestuff
 
 Sources += Makefile
@@ -63,6 +95,7 @@ makestuff/%.stamp:
 -include makestuff/os.mk
 
 -include makestuff/pipeR.mk
+-include makestuff/texj.mk
 -include makestuff/slowtarget.mk
 
 -include makestuff/git.mk
